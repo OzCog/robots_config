@@ -65,3 +65,6 @@ Each pololu board has separate yanl file where all configs including PAU mapping
 ##### tracker.launch
 Robot specific camera drivers and pi_vision settings.
 
+### Nodes
+#### scripts_launcher.py
+Basic script launcher to make simple performances including animations, emotions and tts. See [Sophia Basic Scripts](http://wiki.hansonrobotics.com/w/Sophia_Basic_Scripts) for more information
