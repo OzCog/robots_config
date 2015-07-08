@@ -75,10 +75,10 @@ safe:
             module: joint_position_controller
             type: JointPositionController
         joint_name: Upper-Gimbal-L_joint
-        joint_speed: 1.1
+        joint_speed: 0.4
         motor:
             id: 4
-            init: 1940
+            init: 2040
             min: 1200
             max: 2970
             acceleration: 20
@@ -89,13 +89,13 @@ safe:
             module: joint_position_controller
             type: JointPositionController
         joint_name: Upper-Gimbal-R_joint
-        joint_speed: 1.1
+        joint_speed: 0.4
         motor:
             id: 3
-            init: 2340
+            init: 2240
             min: 1200
             max: 3090
-            acceleration: 20
+            acceleration: 10
 
     Lower_Gimbal_L_controller:
         controller:
@@ -103,13 +103,13 @@ safe:
             module: joint_position_controller
             type: JointPositionController
         joint_name: Lower-Gimbal-L_joint
-        joint_speed: 1.1
+        joint_speed: 0.35
         motor:
             id: 2
             init: 2512
             min: 1700
             max: 2900
-            acceleration: 20
+            acceleration: 10
 
     Lower_Gimbal_R_controller:
         controller:
@@ -117,13 +117,13 @@ safe:
             module: joint_position_controller
             type: JointPositionController
         joint_name: Lower-Gimbal-R_joint
-        joint_speed: 1.1
+        joint_speed: 0.35
         motor:
             id: 1
             init: 1510
             min: 1180
             max: 2478
-            acceleration: 20
+            acceleration: 10
 
     Neck_Rotation_controller:
         controller:
@@ -131,13 +131,13 @@ safe:
             module: joint_position_controller
             type: JointPositionController
         joint_name: Neck-Rotation_joint
-        joint_speed: 1.1
+        joint_speed: 0.8
         motor:
             id: 0
             init: 1994
             min: 1130
             max: 2830
-            acceleration: 20
+            acceleration: 1
 
 
 pau2motors:
@@ -151,42 +151,10 @@ pau2motors:
 voice: katherine 
 lipsync: True
 safety_rules:
-    Smile-L:
-        - type: timing
-          direction: min
-          extreme: 0.35
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Smile-R:
-        - type: timing
-          direction: min
-          extreme: 0.5
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Frown-L:
-        - type: timing
-          direction: max
-          extreme: 0.6
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Frown-R:
-        - type: timing
-          direction: max
-          extreme: 0.6
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
     Jaw-Up-Down:
         - type: timing
           direction: max
-          extreme: 0.3
+          extreme: 0.99
           t1: 1
           t2: 1
           t3: 5
