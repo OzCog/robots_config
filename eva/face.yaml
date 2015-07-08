@@ -157,7 +157,7 @@ Lower-Lip-L:
   pau:
       parser:
         name: fsshapekey
-        shapekey: lip-DN.L.UP;lip-DN.L.DN
+        shapekey: lip-DN.L.DN;lip-DN.L.UP
       function:
         - name: weightedsum
           imin: 0.364
