@@ -32,7 +32,7 @@ All configuration files are inside the folder with robot name.
 The following configuration files are needed for all nodes to run:
 
 ##### bot.properties
-Specifies chatbot answers suchas name age and etc.
+Specifies chatbot answers such as name age and etc.
 
 ##### config.yaml
 Following parmas has to be set:
