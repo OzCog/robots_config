@@ -152,9 +152,9 @@ motors:
         property: m_neckRotation
       function:
         - name: quaternion2dual
-          axis: loleft
+          axis: loright
         - name: linear
-          scale: -1.0
+          scale: 1.0
           translate: 0
 
   - name: Lower-Gimbal-R
@@ -172,9 +172,9 @@ motors:
         property: m_neckRotation
       function:
         - name: quaternion2dual
-          axis: loright
+          axis: loleft
         - name: linear
-          scale: -1.0
+          scale: 1.0
           translate: 0
 
   - name: Neck-Rotation
