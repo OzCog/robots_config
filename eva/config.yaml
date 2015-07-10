@@ -78,7 +78,7 @@ safe:
         joint_speed: 0.4
         motor:
             id: 4
-            init: 2040
+            init: 1990
             min: 1200
             max: 2970
             acceleration: 20
@@ -106,9 +106,9 @@ safe:
         joint_speed: 0.35
         motor:
             id: 2
-            init: 2512
+            init: 2228
             min: 1700
-            max: 2900
+            max: 2672
             acceleration: 10
 
     Lower_Gimbal_R_controller:
@@ -120,9 +120,9 @@ safe:
         joint_speed: 0.35
         motor:
             id: 1
-            init: 1510
+            init: 1868
             min: 1180
-            max: 2478
+            max: 2250
             acceleration: 10
 
     Neck_Rotation_controller:
