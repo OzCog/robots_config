@@ -30,7 +30,7 @@
               output="screen"/>
         </group>
         <node name="pololu" pkg="ros_pololu" type="ros_pololu_node.py" output="screen">
-            <param name="pololu_motors_yaml" value="$(find robots_config)/eva/face.yaml" />
+            <param name="pololu_motors_yaml" value="$(find robots_config)/sophia/face.yaml" />
             <param name="port_name" value="/dev/serial/by-id/usb-Pololu_Corporation_Pololu_Mini_Maestro_24-Channel_USB_Servo_Controller_00080387-if00" />
             <param name="topic_prefix" value="head/" />
             <param name="controller" value="Maestro" />
