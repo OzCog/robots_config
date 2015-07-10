@@ -433,7 +433,15 @@ oo-Drawstring-Lower-R:
   group: Lips
   speed: 0.3
   acceleration: 0.1
-  
+  pau:
+    parser:
+      name: fsshapekey
+      shapekey: wince.L
+    function:
+      - name: linear
+        min: 0.0
+        max: 0.001
+
 oo-Drawstring-Upper-R:
   motor_id: 22
   init: 2000
@@ -444,7 +452,15 @@ oo-Drawstring-Upper-R:
   group: Lips
   speed: 0.3
   acceleration: 0.1
-  
+    pau:
+    parser:
+      name: fsshapekey
+      shapekey: wince.L
+    function:
+      - name: linear
+        min: 0.0
+        max: 0.001
+
 Eyes-Up-Down:
   motor_id: 20
   init: 1650
