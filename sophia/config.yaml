@@ -151,10 +151,42 @@ pau2motors:
 voice: katherine 
 lipsync: True
 safety_rules:
+    Smile-L:
+        - type: timing
+          direction: min
+          extreme: 0.35
+          t1: 1
+          t2: 1
+          t3: 5
+          t4: 1
+    Smile-R:
+        - type: timing
+          direction: min
+          extreme: 0.5
+          t1: 1
+          t2: 1
+          t3: 5
+          t4: 1
+    Frown-L:
+        - type: timing
+          direction: max
+          extreme: 0.6
+          t1: 1
+          t2: 1
+          t3: 5
+          t4: 1
+    Frown-R:
+        - type: timing
+          direction: max
+          extreme: 0.6
+          t1: 1
+          t2: 1
+          t3: 5
+          t4: 1
     Jaw-Up-Down:
         - type: timing
           direction: max
-          extreme: 0.99
+          extreme: 0.6
           t1: 1
           t2: 1
           t3: 5
