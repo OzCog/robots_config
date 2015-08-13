@@ -1,7 +1,7 @@
 EyeTurn-R:
   motor_id: 0
   init: 1555
-  min: 1150
+  min: 1288
   max: 1950
   labelleft: EyeTurn-R
   sort_no: 9
@@ -11,17 +11,20 @@ EyeTurn-R:
   pau:
       parser:
         name: getproperty
-        property: m_eyeGazeRightYaw
+        property: m_eyeGazeRightYaw;m_eyeGazeRightYaw
       function:
-        - name: linear
-          min: -0.44
-          max: 0.44
+        - name: weightedsum
+          imin: 0.402
+          terms:
+          - {min: 0, max: -0.66, imax: 0}
+          - {min: 0, max: 0.75, imax: 1}
+
 
 EyeTurn-L:
   motor_id: 1
-  init: 1848
+  init: 1771
   min: 1275
-  max: 2200
+  max: 1971
   labelleft: EyeTurn-L
   sort_no: 8
   group: Eyes
@@ -30,11 +33,13 @@ EyeTurn-L:
   pau:
       parser:
         name: getproperty
-        property: m_eyeGazeLeftYaw
+        property: m_eyeGazeLeftYaw;m_eyeGazeLeftYaw
       function:
-        - name: linear
-          min: -0.44
-          max: 0.44
+        - name: weightedsum
+          imin: 0.71
+          terms:
+          - {min: 0, max: -0.66, imax: 0}
+          - {min: 0, max: 0.75, imax: 1}
 
 LowerLid-R:
   motor_id: 2
@@ -439,8 +444,8 @@ oo-Drawstring-Lower-R:
       shapekey: wince.L
     function:
       - name: linear
-        min: 0.0
-        max: 0.001
+        scale: 0.0
+        translate: 0.0
 
 oo-Drawstring-Upper-R:
   motor_id: 22
@@ -452,14 +457,14 @@ oo-Drawstring-Upper-R:
   group: Lips
   speed: 0.3
   acceleration: 0.1
-    pau:
-      parser:
-        name: fsshapekey
-        shapekey: wince.L
-      function:
-        - name: linear
-          min: 0.0
-          max: 0.001
+  pau:
+    parser:
+      name: fsshapekey
+      shapekey: wince.L
+    function:
+      - name: linear
+        scale: 0.0
+        translate: 0.0
 
 Eyes-Up-Down:
   motor_id: 20
@@ -472,11 +477,11 @@ Eyes-Up-Down:
   speed: 0
   acceleration: 0
   pau:
-      parser:
-        name: getproperty
-        property: m_eyeGazeLeftPitch
-      function:
-        - name: linear
-          min: 0.2
-          max: -0.3
+    parser:
+      name: getproperty
+      property: m_eyeGazeLeftPitch
+    function:
+      - name: linear
+        min: 0.2
+        max: -0.3
 

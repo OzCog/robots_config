@@ -6,7 +6,7 @@
                 namespace: dxl_manager
                 serial_ports:
                     default:
-                        port_name: "/dev/ttyUSB0"
+                        port_name: "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A9Y5TH9O-if00-port0"
                         baud_rate: 1000000
                         min_motor_id: 0
                         max_motor_id: 9
@@ -40,6 +40,6 @@
 
     <node name="motors_safety" pkg="motors_safety" type="safety.py" output="screen" />
     <node name="scripts_launcher" pkg="robots_config" type="scripts_launcher.py" output="screen" >
-        <param name="scripts_dir" value="/catkin_ws/src/wk_scripts" />
+        <param name="scripts_dir" value="/catkin_ws/src/robots_config/sophia/scripts" />
     </node>
 </launch>

@@ -78,7 +78,7 @@ safe:
         joint_speed: 0.4
         motor:
             id: 4
-            init: 1990
+            init: 2080
             min: 1200
             max: 2970
             acceleration: 20
@@ -143,51 +143,51 @@ safe:
 pau2motors:
     topics:
         neck_pau: Upper-Gimbal-L;Upper-Gimbal-R;Lower-Gimbal-L;Lower-Gimbal-R;Neck-Rotation
-        head_pau: EyeTurn-R;EyeTurn-L;Lower-Lid-L;LowerLid-R;Upper-Lid-R;Upper-Lid-L;Brow-Outer-L;Brow-Outer-R;Brow-Inner-L;Brow-Inner-R;Cheek-Squint;Eyes-Up-Down;Brow-Center
+        head_pau: EyeTurn-R;EyeTurn-L;Lower-Lid-L;LowerLid-R;Upper-Lid-R;Upper-Lid-L;Brow-Outer-L;Brow-Outer-R;Brow-Inner-L;Brow-Inner-R;Cheek-Squint;Eyes-Up-Down;Brow-Center;oo-Drawstring-Upper-R;oo-Drawstring-Lower-R
         no_pau: Frown-R;Frown-L;Smile-R;Smile-L;Jaw-Up-Down;EyeTurn-R;EyeTurn-L;LowerLid-R;Lower-Lid-L;Upper-Lid-R;Upper-Lid-L;Eyes-Up-Down
         lips_pau: Jaw-Up-Down;Lower-Lip-L;Lower-Lip-R;Lower-Lip-Center;Upper-Lip-L;Upper-Lip-R;Upper-Lip-Center;EE-L;EE-R;Frown-R;Frown-L;Smile-R;Smile-L
 
 # Robot voice
 voice: katherine 
 lipsync: True
-safety_rules:
-    Smile-L:
-        - type: timing
-          direction: min
-          extreme: 0.35
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Smile-R:
-        - type: timing
-          direction: min
-          extreme: 0.5
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Frown-L:
-        - type: timing
-          direction: max
-          extreme: 0.6
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Frown-R:
-        - type: timing
-          direction: max
-          extreme: 0.6
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
-    Jaw-Up-Down:
-        - type: timing
-          direction: max
-          extreme: 0.6
-          t1: 1
-          t2: 1
-          t3: 5
-          t4: 1
+#safety_rules:
+#    Smile-L:
+#        - type: timing
+#          direction: min
+#          extreme: 0.35
+#          t1: 1
+#          t2: 1
+#          t3: 5
+#          t4: 1
+#    Smile-R:
+#        - type: timing
+#          direction: min
+#          extreme: 0.5
+#          t1: 1
+#          t2: 1
+#          t3: 5
+#          t4: 1
+#    Frown-L:
+#        - type: timing
+#          direction: max
+#          extreme: 0.6
+#          t1: 1
+#          t2: 1
+#          t3: 5
+#          t4: 1
+#    Frown-R:
+#        - type: timing
+#          direction: max
+#          extreme: 0.6
+#          t1: 1
+#          t2: 1
+#          t3: 5
+#          t4: 1
+#    Jaw-Up-Down:
+#        - type: timing
+#          direction: max
+#          extreme: 0.6
+#          t1: 1
+#          t2: 1
+#          t3: 5
+#          t4: 1
