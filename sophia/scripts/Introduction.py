@@ -13,3 +13,4 @@ But I'm <prosody rate="-20%" pitch="+10Hz" > so </prosody> <prosody rate="+10%" 
 </speak>
 """
 say(s)
+#play("all")

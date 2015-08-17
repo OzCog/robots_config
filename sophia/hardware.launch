@@ -6,7 +6,7 @@
                 namespace: dxl_manager
                 serial_ports:
                     default:
-                        port_name: "/dev/ttyUSB0"
+                        port_name: "/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A9Y5TH9O-if00-port0"
                         baud_rate: 1000000
                         min_motor_id: 0
                         max_motor_id: 9
@@ -30,7 +30,7 @@
               output="screen"/>
         </group>
         <node name="pololu" pkg="ros_pololu" type="ros_pololu_node.py" output="screen">
-            <param name="pololu_motors_yaml" value="$(find robots_config)/eva/face.yaml" />
+            <param name="pololu_motors_yaml" value="$(find robots_config)/sophia/face.yaml" />
             <param name="port_name" value="/dev/serial/by-id/usb-Pololu_Corporation_Pololu_Mini_Maestro_24-Channel_USB_Servo_Controller_00080387-if00" />
             <param name="topic_prefix" value="head/" />
             <param name="controller" value="Maestro" />
@@ -40,6 +40,6 @@
 
     <node name="motors_safety" pkg="motors_safety" type="safety.py" output="screen" />
     <node name="scripts_launcher" pkg="robots_config" type="scripts_launcher.py" output="screen" >
-        <param name="scripts_dir" value="$(find robots_config)/eva/scripts" />
+        <param name="scripts_dir" value="/catkin_ws/src/robots_config/sophia/scripts" />
     </node>
 </launch>
